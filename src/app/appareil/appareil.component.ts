@@ -8,7 +8,7 @@ import { Component,OnInit, Input } from '@angular/core';
 export class AppareilComponent implements OnInit {
 	@Input() appareilName: string = '';
 	
-	appareilStatus:string='eteint';
+	@Input() appareilStatus:string='eteint';
 
 	constructor(){}
 
@@ -16,6 +16,15 @@ export class AppareilComponent implements OnInit {
 
 	getStatus(){
 		return this.appareilStatus;
+	}
+
+	getColor(){
+		if(this.appareilStatus==='allumé'){
+			return 'green';
+		}else if(this.appareilStatus==='eteint'){
+			return 'red';
+		}
+		return null;
 	}
 
 }

@@ -9,6 +9,22 @@ export class AppComponent {
   title = 'mon-projet-angular';
   isAuth:boolean=false;
 
+  appareils = [
+  	{
+  		name:'Machine à laver',
+  		status:'eteint'
+  	},
+  	{
+  		name:'Ordinateur',
+  		status:'eteint'
+  	},
+  	{
+  		name:'Telephone',
+  		status:'eteint'
+  	}
+  ];
+
+
   appareilOne = "Machine à laver";
   appareilTwo = "Frigo";
   appareilThree = "Ordinateur";
