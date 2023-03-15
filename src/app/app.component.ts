@@ -9,6 +9,16 @@ export class AppComponent {
   title = 'mon-projet-angular';
   isAuth:boolean=false;
 
+  lastUpdate = new Promise((resolve,reject)=>{
+    const date = new Date();
+    setTimeout(
+      ()=>{
+        resolve(date);
+      },2000
+      );
+  });
+  }
+
   appareils = [
   	{
   		name:'Machine à laver',
